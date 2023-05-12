@@ -11,6 +11,8 @@ import hollowFlowerIcon from "@assets/去背物件/05-空心花.webp";
 import filledCircleIcon from "@assets/去背物件/06-實心圓.webp";
 import filledWaterDropIcon from "@assets/去背物件/07-實心水.webp";
 import filledFlowerIcon from "@assets/去背物件/08-實心花.webp";
+import background1 from "@assets/去背物件/10-背景1.webp";
+import background2 from "@assets/去背物件/11-背景2.webp";
 import hamburgerIcon from "@assets/去背物件/menu.webp";
 import heroImage from "@assets/圖片/01-首圖.webp";
 import naturalImage from "@assets/圖片/02-自然.webp";
@@ -33,7 +35,7 @@ const ProductFeature = ({
   filedIcon,
 }: ProductFeatureProps) => {
   return (
-    <div className="grid h-[25vw] place-content-center">
+    <div className="z-10 grid h-[25vw] place-content-center">
       <article className="relative mx-auto flex items-start gap-[6vw]">
         <Image
           className="h-[15vw] w-auto"
@@ -48,7 +50,7 @@ const ProductFeature = ({
           <p className="relative text-[1.2vw] font-medium text-olive-800">
             {description}
             <Image
-              className="absolute bottom-[-6vw] right-[-6vw] -z-10 h-[6vw] w-auto"
+              className="absolute bottom-[-6vw] right-[-6vw] z-0 h-[6vw] w-auto"
               src={filedIcon}
               alt={title}
               height={100}
@@ -56,7 +58,7 @@ const ProductFeature = ({
           </p>
         </div>
         <Image
-          className="absolute left-[-9vw] top-[-3vw] -z-10 h-[8vw] w-auto"
+          className="absolute left-[-10vw] top-[-3vw] z-0 h-[8vw] w-auto"
           src={hollowIcon}
           alt={title}
           height={100}
@@ -138,7 +140,12 @@ const Home: NextPage = () => {
             priority
           />
         </section>
-        <section className="flex flex-col py-[6vw]">
+        <section
+          className="flex flex-col bg-cover py-[6vw]"
+          style={{
+            backgroundImage: `url(${background1.src})`,
+          }}
+        >
           <ProductFeature
             title="自然"
             description={
