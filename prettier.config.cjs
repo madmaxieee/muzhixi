@@ -1,15 +1,15 @@
 const config = {
   plugins: [
-    require.resolve('@trivago/prettier-plugin-sort-imports'),
-    require.resolve('prettier-plugin-tailwindcss'),
+    require.resolve("@trivago/prettier-plugin-sort-imports"),
+    require.resolve("prettier-plugin-tailwindcss"),
   ],
   importOrder: [
-    '^react',
-    '^next',
-    '<THIRD_PARTY_MODULES>',
-    '^@w+\\w',
-    '^@\\w',
-    '^./',
+    "^react",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@w+\\w",
+    "^@\\w",
+    "^./",
   ],
   importOrderSeparation: true,
 };
