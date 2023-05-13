@@ -1,5 +1,5 @@
 import { type AppType } from "next/dist/shared/lib/utils";
-import { Noto_Serif_TC } from "next/font/google";
+import { Noto_Serif_TC, Noto_Sans } from "next/font/google";
 
 import "@/styles/globals.css";
 
@@ -9,9 +9,15 @@ const notoSerif = Noto_Serif_TC({
   preload: false,
 });
 
+const notoSans = Noto_Sans({
+  weight: ["500"],
+  variable: "--font-noto-sans",
+  preload: false,
+});
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <div className={`${notoSerif.variable} font-serif`}>
+    <div className={`${notoSerif.variable} ${notoSans.variable} font-serif`}>
       <Component {...pageProps} />
     </div>
   );

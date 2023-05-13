@@ -9,18 +9,17 @@ export default {
     extend: {
       fontFamily: {
         serif: ["var(--font-noto-serif)", ...fontFamily.serif],
+        sans: ["var(--font-noto-sans)", ...fontFamily.sans],
       },
       colors: {
         olive: {
+          100: "#f5f7f2",
           // background
-          100: "#9ca486",
+          400: "#9ca486",
           // heading
-          400: "#748238",
+          600: "#748238",
           // text
           800: "#526632",
-        },
-        offwhite: {
-          DEFAULT: "#f5f7f2",
         },
       },
     },

@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import type { StaticImageData } from "next/image";
 import Image from "next/image";
 
 import headerLogo from "@assets/去背物件/01-木直系logo.webp";
@@ -11,6 +10,7 @@ import hollowFlowerIcon from "@assets/去背物件/05-空心花.webp";
 import filledCircleIcon from "@assets/去背物件/06-實心圓.webp";
 import filledWaterDropIcon from "@assets/去背物件/07-實心水.webp";
 import filledFlowerIcon from "@assets/去背物件/08-實心花.webp";
+import doubleLogo from "@assets/去背物件/09-雙logo.webp";
 import background1 from "@assets/去背物件/10-背景1.webp";
 import background2 from "@assets/去背物件/11-背景2.webp";
 import hamburgerIcon from "@assets/去背物件/menu.webp";
@@ -18,55 +18,17 @@ import heroImage from "@assets/圖片/01-首圖.webp";
 import naturalImage from "@assets/圖片/02-自然.webp";
 import mildImage from "@assets/圖片/03-溫和.webp";
 import relaxImage from "@assets/圖片/04-放鬆.webp";
+import patchImage from "@assets/圖片/05-貼布.webp";
+import ballImage from "@assets/圖片/06-滾珠瓶.webp";
+import creamImage from "@assets/圖片/07-按摩霜.webp";
+import shopeeLogo from "@assets/圖片/08-蝦皮logo.webp";
+import watsonsLogo from "@assets/圖片/09-屈臣氏logo.webp";
+import pinkoiLogo from "@assets/圖片/10-Pinkoi logo.webp";
+import poyaLogo from "@assets/圖片/11-寶雅 logo.webp";
 
-type ProductFeatureProps = {
-  title: string;
-  description: string;
-  hollowIcon: StaticImageData;
-  filedIcon: StaticImageData;
-  imageData: StaticImageData;
-};
-
-const ProductFeature = ({
-  title,
-  description,
-  imageData,
-  hollowIcon,
-  filedIcon,
-}: ProductFeatureProps) => {
-  return (
-    <div className="z-10 grid h-[25vw] place-content-center">
-      <article className="relative mx-auto flex items-start gap-[6vw]">
-        <Image
-          className="h-[15vw] w-auto"
-          src={imageData}
-          alt={title}
-          height={400}
-        />
-        <div className="w-[35vw]">
-          <h3 className="mb-[2vw] mt-[2vw] text-[2.5vw] font-bold text-olive-400">
-            {title}
-          </h3>
-          <p className="relative text-[1.2vw] font-medium text-olive-800">
-            {description}
-            <Image
-              className="absolute bottom-[-6vw] right-[-6vw] z-0 h-[6vw] w-auto"
-              src={filedIcon}
-              alt={title}
-              height={100}
-            />
-          </p>
-        </div>
-        <Image
-          className="absolute left-[-10vw] top-[-3vw] z-0 h-[8vw] w-auto"
-          src={hollowIcon}
-          alt={title}
-          height={100}
-        />
-      </article>
-    </div>
-  );
-};
+import Product from "@/components/Product";
+import ProductFeature from "@/components/ProductFeature";
+import ShopLogo from "@/components/ShopLogo";
 
 const Home: NextPage = () => {
   return (
@@ -93,7 +55,7 @@ const Home: NextPage = () => {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <header className="flex items-end justify-between bg-olive-100 px-[3vw] py-[2vw]">
+      <header className="flex items-end justify-between bg-olive-400 px-[3vw] py-[2vw]">
         <Image
           className="h-[7vw] w-auto"
           src={headerLogo}
@@ -110,7 +72,7 @@ const Home: NextPage = () => {
         />
       </header>
       <main>
-        <section className="flex bg-offwhite">
+        <section className="flex bg-olive-100">
           <article className="mx-auto my-auto flex w-[30vw] flex-col">
             <div className="mb-[2vw]">
               <Image
@@ -122,13 +84,13 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="mb-[3vw]">
-              <h1 className="text-[2.5vw] font-bold leading-normal text-olive-400">
+              <h1 className="text-[2.5vw] font-bold leading-normal text-olive-600">
                 天然草本的自然力
                 <br />
                 呵護自信的好朋友
               </h1>
             </div>
-            <p className="text-[1.2vw] font-medium text-olive-400">
+            <p className="text-[1.2vw] font-medium text-olive-600">
               木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。
             </p>
           </article>
@@ -177,6 +139,68 @@ const Home: NextPage = () => {
             filedIcon={filledFlowerIcon}
           />
         </section>
+        <section className="flex flex-col items-center bg-olive-100 bg-cover">
+          <h2 className="mt-[4vw] text-[1.8vw] font-bold text-olive-600">
+            迷迭香系列
+          </h2>
+          <div className="grid w-[70vw] grid-cols-2 gap-[5vw] pb-[6vw] pt-[4vw]">
+            <Product imageData={patchImage} name={"迷迭香貼布"} price={350} />
+            <Product imageData={ballImage} name={"迷迭香滾珠瓶"} price={350} />
+            <Product imageData={ballImage} name={"迷迭香滾珠瓶"} price={350} />
+            <Product imageData={creamImage} name={"迷迭香按摩霜"} price={350} />
+          </div>
+        </section>
+        <section
+          className="flex flex-col items-center bg-cover pb-[6vw] pt-[4vw]"
+          style={{
+            backgroundImage: `url(${background2.src})`,
+          }}
+        >
+          <h2 className="text-[1.8vw] font-bold text-olive-600">購買通路</h2>
+          <div className="grid grid-cols-4 gap-[5vw] p-[3vw]">
+            <ShopLogo logoData={shopeeLogo} />
+            <ShopLogo logoData={watsonsLogo} />
+            <ShopLogo logoData={pinkoiLogo} />
+            <ShopLogo logoData={poyaLogo} />
+          </div>
+          <article className="mx-auto my-[2vw] flex w-[70vw] items-center gap-[3vw] rounded-3xl bg-olive-100 p-[5vw]">
+            <Image
+              className="h-[15vw] w-auto"
+              src={doubleLogo}
+              alt="logo"
+              height={400}
+            />
+            <div className="flex h-[15vw] flex-col justify-between py-[1vw]">
+              <div className="flex justify-between">
+                <h3 className="text-[1.8vw] font-bold text-olive-600">
+                  關於我們
+                </h3>
+                <Image
+                  className="h-[1.8vw] w-auto"
+                  src={threeDotsIcon}
+                  height={50}
+                  alt="decoration"
+                />
+              </div>
+              <p className="text-[1.2vw] font-medium text-olive-800">
+                {"木直系為溫太醫的副品牌。" +
+                  "木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。" +
+                  "草本成分主要來自台灣的天然植物，如迷迭香、薰衣草、玫瑰等，並且採用低溫萃取技術，以保持植物中的營養成分和活性成分，為肌膚帶來最大程度的滋潤和修護。"}
+              </p>
+            </div>
+          </article>
+        </section>
+        <footer className="flex w-full flex-col items-center gap-[1vw] bg-olive-400 p-[3vw]">
+          <div className="flex gap-[1vw] text-[1vw] font-medium text-olive-800">
+            <p>
+              <span className="font-bold">電話</span> | (02)2225-7688
+            </p>
+            <p>
+              <span className="font-bold">時間</span> | 週一至週五 10:00 ~ 17:00
+            </p>
+          </div>
+          <p className="text-[1.2vw] font-medium">2023 © 木直系</p>
+        </footer>
       </main>
     </>
   );
