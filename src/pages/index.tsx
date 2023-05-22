@@ -13,7 +13,6 @@ import filledFlowerIcon from "@assets/去背物件/08-實心花.webp";
 import doubleLogo from "@assets/去背物件/09-雙logo.webp";
 import background1 from "@assets/去背物件/10-背景1.webp";
 import background2 from "@assets/去背物件/11-背景2.webp";
-import hamburgerIcon from "@assets/去背物件/menu.webp";
 import heroImage from "@assets/圖片/01-首圖.webp";
 import naturalImage from "@assets/圖片/02-自然.webp";
 import mildImage from "@assets/圖片/03-溫和.webp";
@@ -26,6 +25,7 @@ import watsonsLogo from "@assets/圖片/09-屈臣氏logo.webp";
 import pinkoiLogo from "@assets/圖片/10-Pinkoi logo.webp";
 import poyaLogo from "@assets/圖片/11-寶雅 logo.webp";
 
+import Hamburger from "@/components/Hamburger";
 import Product from "@/components/Product";
 import ProductFeature from "@/components/ProductFeature";
 import ShopLogo from "@/components/ShopLogo";
@@ -63,13 +63,7 @@ const Home: NextPage = () => {
           height={100}
           priority
         />
-        <Image
-          className="h-[1.5vw] w-auto"
-          src={hamburgerIcon}
-          alt="選單"
-          height={50}
-          priority
-        />
+        <Hamburger />
       </header>
       <main>
         <section className="flex bg-olive-100">
@@ -108,6 +102,9 @@ const Home: NextPage = () => {
             backgroundImage: `url(${background1.src})`,
           }}
         >
+          <h2 className="sr-only" id="品牌理念">
+            品牌理念
+          </h2>
           <ProductFeature
             title="自然"
             description={
@@ -140,7 +137,10 @@ const Home: NextPage = () => {
           />
         </section>
         <section className="flex flex-col items-center bg-olive-100 bg-cover">
-          <h2 className="mt-[4vw] text-[1.8vw] font-bold text-olive-600">
+          <h2
+            id="迷迭香系列"
+            className="mt-[4vw] text-[1.8vw] font-bold text-olive-600"
+          >
             迷迭香系列
           </h2>
           <div className="grid w-[70vw] grid-cols-2 gap-[5vw] pb-[6vw] pt-[4vw]">
@@ -156,7 +156,9 @@ const Home: NextPage = () => {
             backgroundImage: `url(${background2.src})`,
           }}
         >
-          <h2 className="text-[1.8vw] font-bold text-olive-600">購買通路</h2>
+          <h2 id="購買通路" className="text-[1.8vw] font-bold text-olive-600">
+            購買通路
+          </h2>
           <div className="grid grid-cols-4 gap-[5vw] p-[3vw]">
             <ShopLogo logoData={shopeeLogo} />
             <ShopLogo logoData={watsonsLogo} />
@@ -172,9 +174,12 @@ const Home: NextPage = () => {
             />
             <div className="flex h-[15vw] flex-col justify-between py-[1vw]">
               <div className="flex justify-between">
-                <h3 className="text-[1.8vw] font-bold text-olive-600">
+                <h2
+                  id="關於我們"
+                  className="text-[1.8vw] font-bold text-olive-600"
+                >
                   關於我們
-                </h3>
+                </h2>
                 <Image
                   className="h-[1.8vw] w-auto"
                   src={threeDotsIcon}
