@@ -197,7 +197,10 @@ const Home: NextPage = () => {
           }}
         >
           <Appear>
-            <h2 id="購買通路" className="text-[1.8vw] font-bold text-olive-600">
+            <h2
+              id="購買通路"
+              className="text-center text-[1.8vw] font-bold text-olive-600"
+            >
               購買通路
             </h2>
             <div className="grid grid-cols-4 gap-[5vw] p-[3vw]">
