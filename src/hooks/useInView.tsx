@@ -27,7 +27,7 @@ export default function useInView(onInView: () => void, threshold = 0) {
             onInView();
           }
         },
-        { threshold: 0.3 }
+        { threshold: 0.1 }
       );
       observer.observe(element);
     }

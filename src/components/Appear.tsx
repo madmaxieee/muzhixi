@@ -1,14 +1,17 @@
 import { useState, type ReactNode } from "react";
 
+import clsx from "clsx";
+
 import { animated, useSpring } from "@react-spring/web";
 
 import useInView from "@/hooks/useInView";
 
 type AppearProps = {
   children: ReactNode;
+  className?: string;
 };
 
-export const Appear = ({ children }: AppearProps) => {
+export const Appear = ({ children, className }: AppearProps) => {
   const [isInView, setInView] = useState(false);
 
   const inViewRef = useInView(() => setInView(true));
@@ -28,6 +31,7 @@ export const Appear = ({ children }: AppearProps) => {
   return (
     <animated.div
       ref={inViewRef}
+      className={clsx(className)}
       style={{
         opacity,
         transform: y.to((y) => `translateY(${y})`),

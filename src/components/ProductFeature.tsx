@@ -24,6 +24,7 @@ const ProductFeature = ({
           src={imageData}
           alt={title}
           height={400}
+          priority
         />
         <div className="w-[35vw]">
           <h3 className="mb-[2vw] mt-[2vw] text-[2.5vw] font-bold text-olive-600">
@@ -36,6 +37,7 @@ const ProductFeature = ({
               src={filedIcon}
               alt={title}
               height={100}
+              priority
             />
           </p>
         </div>
@@ -44,6 +46,7 @@ const ProductFeature = ({
           src={hollowIcon}
           alt={title}
           height={100}
+          priority
         />
       </article>
     </div>

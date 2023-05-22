@@ -143,8 +143,8 @@ const Home: NextPage = () => {
             />
           </Appear>
         </section>
-        <section className="flex flex-col items-center bg-olive-100 bg-cover">
-          <Appear>
+        <section>
+          <Appear className="flex flex-col items-center bg-olive-100 bg-cover">
             <h2
               id="迷迭香系列"
               className="mt-[4vw] text-[1.8vw] font-bold text-olive-600"
@@ -172,12 +172,11 @@ const Home: NextPage = () => {
           </Appear>
         </section>
         <section
-          className="flex flex-col items-center bg-cover pb-[6vw] pt-[4vw]"
           style={{
             backgroundImage: `url(${background2.src})`,
           }}
         >
-          <Appear>
+          <Appear className="flex flex-col items-center bg-cover pb-[6vw] pt-[4vw]">
             <h2 id="購買通路" className="text-[1.8vw] font-bold text-olive-600">
               購買通路
             </h2>
@@ -186,11 +185,11 @@ const Home: NextPage = () => {
                 href="https://shopee.tw/wentaiye#product_list"
                 logoData={shopeeLogo}
               />
+              <ShopLogo href="/" logoData={watsonsLogo} />
               <ShopLogo
                 href="https://www.pinkoi.com/store/wentaiye?utm_term=store&utm_medium=ios_share&utm_source=Copy&utm_content=fb_3141912129365699&utm_campaign=koc"
-                logoData={watsonsLogo}
+                logoData={pinkoiLogo}
               />
-              <ShopLogo href="/" logoData={pinkoiLogo} />
               <ShopLogo
                 href="https://www.poyabuy.com.tw/tagCategory/%E6%BA%AB%E5%A4%AA%E9%86%AB?pages=1&sortMode=Newest"
                 logoData={poyaLogo}
