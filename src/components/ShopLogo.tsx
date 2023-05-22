@@ -3,18 +3,19 @@ import Image from "next/image";
 
 type ShopLogoProps = {
   logoData: StaticImageData;
+  href: string;
 };
 
-export const ShopLogo = ({ logoData }: ShopLogoProps) => {
+export const ShopLogo = ({ logoData, href }: ShopLogoProps) => {
   return (
-    <div>
+    <a href={href} target="_blank" rel="noreferrer">
       <Image
-        className="h-[12vw] w-auto"
+        className="h-[12vw] w-auto transition-all hover:translate-y-[0.2vw] hover:opacity-90"
         src={logoData}
         height={100}
         alt="logo"
       />
-    </div>
+    </a>
   );
 };
 

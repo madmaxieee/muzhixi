@@ -182,20 +182,36 @@ const Home: NextPage = () => {
               購買通路
             </h2>
             <div className="grid grid-cols-4 gap-[5vw] p-[3vw]">
-              <ShopLogo logoData={shopeeLogo} />
-              <ShopLogo logoData={watsonsLogo} />
-              <ShopLogo logoData={pinkoiLogo} />
-              <ShopLogo logoData={poyaLogo} />
+              <ShopLogo
+                href="https://shopee.tw/wentaiye#product_list"
+                logoData={shopeeLogo}
+              />
+              <ShopLogo
+                href="https://www.pinkoi.com/store/wentaiye?utm_term=store&utm_medium=ios_share&utm_source=Copy&utm_content=fb_3141912129365699&utm_campaign=koc"
+                logoData={watsonsLogo}
+              />
+              <ShopLogo href="/" logoData={pinkoiLogo} />
+              <ShopLogo
+                href="https://www.poyabuy.com.tw/tagCategory/%E6%BA%AB%E5%A4%AA%E9%86%AB?pages=1&sortMode=Newest"
+                logoData={poyaLogo}
+              />
             </div>
           </Appear>
           <Appear>
             <article className="mx-auto my-[2vw] flex w-[70vw] items-center gap-[3vw] rounded-3xl bg-olive-100 p-[5vw]">
-              <Image
-                className="h-[15vw] w-auto"
-                src={doubleLogo}
-                alt="logo"
-                height={400}
-              />
+              <a
+                href="https://www.wentaiye.com/about/"
+                target="_blank"
+                rel="noreferrer"
+                className="grid h-[15vw] w-[50vw] place-items-center rounded-2xl bg-opacity-5 transition-all hover:bg-white"
+              >
+                <Image
+                  src={doubleLogo}
+                  className="h-[15vw] w-auto p-[1vw]"
+                  alt="logo"
+                  height={800}
+                />
+              </a>
               <div className="flex h-[15vw] flex-col justify-between py-[1vw]">
                 <div className="flex justify-between">
                   <h2

@@ -13,14 +13,14 @@ export const Appear = ({ children }: AppearProps) => {
 
   const inViewRef = useInView(() => setInView(true));
 
-  const { x, opacity } = useSpring({
+  const { y, opacity } = useSpring({
     from: {
       opacity: "0%",
-      x: "0",
+      y: "0",
     },
     to: {
       opacity: isInView ? "100%" : "0%",
-      x: isInView ? "0" : "20vw",
+      y: isInView ? "0" : "20vw",
     },
     duration: 500,
   });
@@ -30,7 +30,7 @@ export const Appear = ({ children }: AppearProps) => {
       ref={inViewRef}
       style={{
         opacity,
-        transform: x.to((x) => `translateX(${x})`),
+        transform: y.to((y) => `translateY(${y})`),
       }}
     >
       {children}
