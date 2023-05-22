@@ -25,6 +25,7 @@ import watsonsLogo from "@assets/圖片/09-屈臣氏logo.webp";
 import pinkoiLogo from "@assets/圖片/10-Pinkoi logo.webp";
 import poyaLogo from "@assets/圖片/11-寶雅 logo.webp";
 
+import Appear from "@/components/Appear";
 import Hamburger from "@/components/Hamburger";
 import Product from "@/components/Product";
 import ProductFeature from "@/components/ProductFeature";
@@ -105,50 +106,70 @@ const Home: NextPage = () => {
           <h2 className="sr-only" id="品牌理念">
             品牌理念
           </h2>
-          <ProductFeature
-            title="自然"
-            description={
-              "產品採用高純度自然配方，精選自然優質草本原材料。" +
-              "以自然的草本材料搭配，精簡護膚，雨潤無聲，喚醒肌膚生命力，讓肌膚自然變美。" +
-              "以自然優質的草本精油作原材料，成分溫和，修復肌膚屏障，深層護膚，綻放水嫩透，讓肌膚回復年輕狀態。"
-            }
-            imageData={naturalImage}
-            hollowIcon={hollowCircleIcon}
-            filedIcon={filledCircleIcon}
-          />
-          <ProductFeature
-            title="溫和"
-            description={
-              "採用低溫萃取技術，以保持原材料中的營養成分和活性成分，讓營養大程度地滲入肌底，讓肌膚狀態保持穩定，溫和修復肌膚屏障。"
-            }
-            imageData={mildImage}
-            hollowIcon={hollowWaterDropIcon}
-            filedIcon={filledWaterDropIcon}
-          />
-          <ProductFeature
-            title="放鬆"
-            description={
-              "護膚時間變得鬆弛享受，也讓疲勞的肌膚喘口氣。" +
-              "木直系產品加入草本精油成分，自然的芬香可以讓人放鬆心情，享受護膚時間，草本精油的成份自然純淨溫和，有利於排除皮膚上的代謝廢物，提升肌膚滲透力，鎖緊皮膚中的水份，鎮定肌膚，增強活力。"
-            }
-            imageData={relaxImage}
-            hollowIcon={hollowFlowerIcon}
-            filedIcon={filledFlowerIcon}
-          />
+          <Appear>
+            <ProductFeature
+              title="自然"
+              description={
+                "產品採用高純度自然配方，精選自然優質草本原材料。" +
+                "以自然的草本材料搭配，精簡護膚，雨潤無聲，喚醒肌膚生命力，讓肌膚自然變美。" +
+                "以自然優質的草本精油作原材料，成分溫和，修復肌膚屏障，深層護膚，綻放水嫩透，讓肌膚回復年輕狀態。"
+              }
+              imageData={naturalImage}
+              hollowIcon={hollowCircleIcon}
+              filedIcon={filledCircleIcon}
+            />
+          </Appear>
+          <Appear>
+            <ProductFeature
+              title="溫和"
+              description={
+                "採用低溫萃取技術，以保持原材料中的營養成分和活性成分，讓營養大程度地滲入肌底，讓肌膚狀態保持穩定，溫和修復肌膚屏障。"
+              }
+              imageData={mildImage}
+              hollowIcon={hollowWaterDropIcon}
+              filedIcon={filledWaterDropIcon}
+            />
+          </Appear>
+          <Appear>
+            <ProductFeature
+              title="放鬆"
+              description={
+                "護膚時間變得鬆弛享受，也讓疲勞的肌膚喘口氣。" +
+                "木直系產品加入草本精油成分，自然的芬香可以讓人放鬆心情，享受護膚時間，草本精油的成份自然純淨溫和，有利於排除皮膚上的代謝廢物，提升肌膚滲透力，鎖緊皮膚中的水份，鎮定肌膚，增強活力。"
+              }
+              imageData={relaxImage}
+              hollowIcon={hollowFlowerIcon}
+              filedIcon={filledFlowerIcon}
+            />
+          </Appear>
         </section>
         <section className="flex flex-col items-center bg-olive-100 bg-cover">
-          <h2
-            id="迷迭香系列"
-            className="mt-[4vw] text-[1.8vw] font-bold text-olive-600"
-          >
-            迷迭香系列
-          </h2>
-          <div className="grid w-[70vw] grid-cols-2 gap-[5vw] pb-[6vw] pt-[4vw]">
-            <Product imageData={patchImage} name={"迷迭香貼布"} price={350} />
-            <Product imageData={ballImage} name={"迷迭香滾珠瓶"} price={350} />
-            <Product imageData={ballImage} name={"迷迭香滾珠瓶"} price={350} />
-            <Product imageData={creamImage} name={"迷迭香按摩霜"} price={350} />
-          </div>
+          <Appear>
+            <h2
+              id="迷迭香系列"
+              className="mt-[4vw] text-[1.8vw] font-bold text-olive-600"
+            >
+              迷迭香系列
+            </h2>
+            <div className="grid w-[70vw] grid-cols-2 gap-[5vw] pb-[6vw] pt-[4vw]">
+              <Product imageData={patchImage} name={"迷迭香貼布"} price={350} />
+              <Product
+                imageData={ballImage}
+                name={"迷迭香滾珠瓶"}
+                price={350}
+              />
+              <Product
+                imageData={ballImage}
+                name={"迷迭香滾珠瓶"}
+                price={350}
+              />
+              <Product
+                imageData={creamImage}
+                name={"迷迭香按摩霜"}
+                price={350}
+              />
+            </div>
+          </Appear>
         </section>
         <section
           className="flex flex-col items-center bg-cover pb-[6vw] pt-[4vw]"
@@ -156,44 +177,48 @@ const Home: NextPage = () => {
             backgroundImage: `url(${background2.src})`,
           }}
         >
-          <h2 id="購買通路" className="text-[1.8vw] font-bold text-olive-600">
-            購買通路
-          </h2>
-          <div className="grid grid-cols-4 gap-[5vw] p-[3vw]">
-            <ShopLogo logoData={shopeeLogo} />
-            <ShopLogo logoData={watsonsLogo} />
-            <ShopLogo logoData={pinkoiLogo} />
-            <ShopLogo logoData={poyaLogo} />
-          </div>
-          <article className="mx-auto my-[2vw] flex w-[70vw] items-center gap-[3vw] rounded-3xl bg-olive-100 p-[5vw]">
-            <Image
-              className="h-[15vw] w-auto"
-              src={doubleLogo}
-              alt="logo"
-              height={400}
-            />
-            <div className="flex h-[15vw] flex-col justify-between py-[1vw]">
-              <div className="flex justify-between">
-                <h2
-                  id="關於我們"
-                  className="text-[1.8vw] font-bold text-olive-600"
-                >
-                  關於我們
-                </h2>
-                <Image
-                  className="h-[1.8vw] w-auto"
-                  src={threeDotsIcon}
-                  height={50}
-                  alt="decoration"
-                />
-              </div>
-              <p className="text-[1.2vw] font-medium text-olive-800">
-                {"木直系為溫太醫的副品牌。" +
-                  "木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。" +
-                  "草本成分主要來自台灣的天然植物，如迷迭香、薰衣草、玫瑰等，並且採用低溫萃取技術，以保持植物中的營養成分和活性成分，為肌膚帶來最大程度的滋潤和修護。"}
-              </p>
+          <Appear>
+            <h2 id="購買通路" className="text-[1.8vw] font-bold text-olive-600">
+              購買通路
+            </h2>
+            <div className="grid grid-cols-4 gap-[5vw] p-[3vw]">
+              <ShopLogo logoData={shopeeLogo} />
+              <ShopLogo logoData={watsonsLogo} />
+              <ShopLogo logoData={pinkoiLogo} />
+              <ShopLogo logoData={poyaLogo} />
             </div>
-          </article>
+          </Appear>
+          <Appear>
+            <article className="mx-auto my-[2vw] flex w-[70vw] items-center gap-[3vw] rounded-3xl bg-olive-100 p-[5vw]">
+              <Image
+                className="h-[15vw] w-auto"
+                src={doubleLogo}
+                alt="logo"
+                height={400}
+              />
+              <div className="flex h-[15vw] flex-col justify-between py-[1vw]">
+                <div className="flex justify-between">
+                  <h2
+                    id="關於我們"
+                    className="text-[1.8vw] font-bold text-olive-600"
+                  >
+                    關於我們
+                  </h2>
+                  <Image
+                    className="h-[1.8vw] w-auto"
+                    src={threeDotsIcon}
+                    height={50}
+                    alt="decoration"
+                  />
+                </div>
+                <p className="text-[1.2vw] font-medium text-olive-800">
+                  {"木直系為溫太醫的副品牌。" +
+                    "木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。" +
+                    "草本成分主要來自台灣的天然植物，如迷迭香、薰衣草、玫瑰等，並且採用低溫萃取技術，以保持植物中的營養成分和活性成分，為肌膚帶來最大程度的滋潤和修護。"}
+                </p>
+              </div>
+            </article>
+          </Appear>
         </section>
         <footer className="flex w-full flex-col items-center gap-[1vw] bg-olive-400 p-[3vw]">
           <div className="flex gap-[1vw] text-[1vw] font-medium text-olive-800">

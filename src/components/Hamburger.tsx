@@ -18,8 +18,8 @@ export const Hamburger = () => {
 
   const { x } = useSpring({
     from: { x: 0 },
-    x: isMenuOpen ? 1 : 0,
-    duration: 300,
+    to: { x: isMenuOpen ? 1 : 0 },
+    duration: 500,
     onRest: () => {
       if (!isMenuOpen) {
         setShowMenu(false);
@@ -44,13 +44,13 @@ export const Hamburger = () => {
             style={{
               opacity: x.to({ range: [0, 1], output: [0, 1] }),
             }}
-            className="flex flex-col gap-[3vw] rounded-2xl bg-white bg-opacity-50 py-[3vw] backdrop-blur-sm"
+            className="flex flex-col gap-[0.5vw] rounded-2xl bg-white bg-opacity-50 py-[3vw] backdrop-blur-sm"
             role="navigation"
           >
             {sections.map((section) => (
               <a
                 key={section}
-                className="text-center text-[2vw] font-bold text-olive-600"
+                className="p-[1.5vw] text-center text-[2vw] font-bold text-olive-600 transition-all hover:translate-x-[0.3vw] hover:text-olive-800"
                 href={`#${section}`}
                 onClick={() => setShowMenu(false)}
               >
