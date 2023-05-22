@@ -24,8 +24,11 @@ import shopeeLogo from "@assets/圖片/08-蝦皮logo.webp";
 import watsonsLogo from "@assets/圖片/09-屈臣氏logo.webp";
 import pinkoiLogo from "@assets/圖片/10-Pinkoi logo.webp";
 import poyaLogo from "@assets/圖片/11-寶雅 logo.webp";
+import heroImage2 from "@assets/圖片/12-首圖-2.webp";
+import heroImage3 from "@assets/圖片/13-首圖-3.webp";
 
 import Appear from "@/components/Appear";
+import Carousel from "@/components/Carousel";
 import Hamburger from "@/components/Hamburger";
 import Product from "@/components/Product";
 import ProductFeature from "@/components/ProductFeature";
@@ -89,13 +92,29 @@ const Home: NextPage = () => {
               木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。
             </p>
           </article>
-          <Image
-            className="h-auto w-[55vw]"
-            src={heroImage}
-            alt="木直系"
-            width={1920}
-            priority
-          />
+          <Carousel className="w-[55vw]">
+            <Image
+              className="h-[36vw] w-[55vw] object-cover"
+              src={heroImage}
+              alt="木直系"
+              width={1920}
+              priority
+            />
+            <Image
+              className="h-[36vw] w-[55vw] object-cover"
+              src={heroImage2}
+              alt="木直系"
+              width={1920}
+              priority
+            />
+            <Image
+              className="h-[36vw] w-[55vw] object-cover"
+              src={heroImage3}
+              alt="木直系"
+              width={1920}
+              priority
+            />
+          </Carousel>
         </section>
         <section
           className="flex flex-col bg-cover py-[6vw]"
@@ -172,11 +191,12 @@ const Home: NextPage = () => {
           </Appear>
         </section>
         <section
+          className="flex flex-col items-center bg-cover pb-[6vw] pt-[4vw]"
           style={{
             backgroundImage: `url(${background2.src})`,
           }}
         >
-          <Appear className="flex flex-col items-center bg-cover pb-[6vw] pt-[4vw]">
+          <Appear>
             <h2 id="購買通路" className="text-[1.8vw] font-bold text-olive-600">
               購買通路
             </h2>
