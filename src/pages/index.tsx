@@ -4,10 +4,10 @@ import Image from "next/image";
 
 import headerLogo from "@assets/去背物件/01-木直系logo.webp";
 import threeDotsIcon from "@assets/去背物件/02-三點.webp";
-import hollowCircleIcon from "@assets/去背物件/03-空心圓.webp";
+import hollowHexagonIcon from "@assets/去背物件/03-空心六角.webp";
 import hollowWaterDropIcon from "@assets/去背物件/04-空心水.webp";
 import hollowFlowerIcon from "@assets/去背物件/05-空心花.webp";
-import filledCircleIcon from "@assets/去背物件/06-實心圓.webp";
+import filledHexagonIcon from "@assets/去背物件/06-實心六角.webp";
 import filledWaterDropIcon from "@assets/去背物件/07-實心水.webp";
 import filledFlowerIcon from "@assets/去背物件/08-實心花.webp";
 import doubleLogo from "@assets/去背物件/09-雙logo.webp";
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               </h1>
             </div>
             <p className="text-[1.2vw] font-medium text-olive-600">
-              木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。
+              我們專注挑選高品質、親膚溫和、低敏低刺激性的草本植粹原料，藉由植物本身具有的特質做為養護肌膚的養分，由外向內為每位女孩培養自信的光芒。
             </p>
           </article>
           <Carousel className="w-[55vw]">
@@ -127,22 +127,23 @@ const Home: NextPage = () => {
           </h2>
           <Appear>
             <ProductFeature
-              title="自然"
+              title="呵護"
               description={
-                "產品採用高純度自然配方，精選自然優質草本原材料。" +
-                "以自然的草本材料搭配，精簡護膚，雨潤無聲，喚醒肌膚生命力，讓肌膚自然變美。" +
-                "以自然優質的草本精油作原材料，成分溫和，修復肌膚屏障，深層護膚，綻放水嫩透，讓肌膚回復年輕狀態。"
+                "木直系，專注於呵護每位女孩的肌膚與內心。我們選用高品質的草本植粹原料，融合天然的養分，為你帶來溫柔純淨的呵護體驗。" +
+                "我們相信，只有來自大自然的純淨力量，才能真正滋養肌膚，讓你重拾自信光芒。"
               }
               imageData={naturalImage}
-              hollowIcon={hollowCircleIcon}
-              filedIcon={filledCircleIcon}
+              hollowIcon={hollowHexagonIcon}
+              filedIcon={filledHexagonIcon}
             />
           </Appear>
           <Appear>
             <ProductFeature
-              title="溫和"
+              title="放鬆"
               description={
-                "採用低溫萃取技術，以保持原材料中的營養成分和活性成分，讓營養大程度地滲入肌底，讓肌膚狀態保持穩定，溫和修復肌膚屏障。"
+                "木直系致力於讓每位女孩找回生活中的放鬆與平衡。" +
+                "我們懷著對草本植粹的熱愛，運用其獨特香氣、功效和特性，創造出一系列能療癒身心靈的產品。" +
+                "無論是在忙碌的日常生活中，還是在壓力下需要紓解時，木直系將伴隨著你，帶來身心靈的放鬆。"
               }
               imageData={mildImage}
               hollowIcon={hollowWaterDropIcon}
@@ -151,10 +152,11 @@ const Home: NextPage = () => {
           </Appear>
           <Appear>
             <ProductFeature
-              title="放鬆"
+              title="調理"
               description={
-                "護膚時間變得鬆弛享受，也讓疲勞的肌膚喘口氣。" +
-                "木直系產品加入草本精油成分，自然的芬香可以讓人放鬆心情，享受護膚時間，草本精油的成份自然純淨溫和，有利於排除皮膚上的代謝廢物，提升肌膚滲透力，鎖緊皮膚中的水份，鎮定肌膚，增強活力。"
+                "木直系的草本產品不僅能滋潤肌膚，更能調理你的內在。" +
+                "我們專注於選擇親膚溫和、低敏低刺激性的草本植粹原料，讓植物的養分由外而內滲透，為你培養自信的光芒。" +
+                "木直系將陪伴著你，為你提供最溫和有效的調理，讓你成長綻放。"
               }
               imageData={relaxImage}
               hollowIcon={hollowFlowerIcon}
@@ -171,16 +173,16 @@ const Home: NextPage = () => {
               迷迭香系列
             </h2>
             <div className="grid w-[70vw] grid-cols-2 gap-[5vw] pb-[6vw] pt-[4vw]">
-              <Product imageData={patchImage} name={"迷迭香貼布"} price={350} />
+              <Product imageData={patchImage} name={"迷迭香貼布"} price={200} />
               <Product
                 imageData={ballImage}
                 name={"迷迭香滾珠瓶"}
-                price={350}
+                price={200}
               />
               <Product
                 imageData={ballImage}
                 name={"迷迭香滾珠瓶"}
-                price={350}
+                price={200}
               />
               <Product
                 imageData={creamImage}
@@ -251,8 +253,8 @@ const Home: NextPage = () => {
                 </div>
                 <p className="text-[1.2vw] font-medium text-olive-800">
                   {"木直系為溫太醫的副品牌。" +
-                    "木直系秉承著「自然、溫和、放鬆」的理念，注重保持產品的純淨度和安全性，並不斷研發創新，推出符合不同膚質需求的產品。" +
-                    "草本成分主要來自台灣的天然植物，如迷迭香、薰衣草、玫瑰等，並且採用低溫萃取技術，以保持植物中的營養成分和活性成分，為肌膚帶來最大程度的滋潤和修護。"}
+                    "木直系將草本植粹中「呵護」的自然力量激發出來，結合中藥材養生配方，從香氣、從功效、從草本特性，多面向的照顧、療癒每位女孩的身心靈，找回生活的放鬆與平衡。" +
+                    "我們希望木直系的草本產品，能作為每位女孩身心靈中，滋潤呵護自信成長的露水。"}
                 </p>
               </div>
             </article>
