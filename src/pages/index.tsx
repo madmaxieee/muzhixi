@@ -4,12 +4,12 @@ import Image from "next/image";
 
 import headerLogo from "@assets/去背物件/01-木直系logo.webp";
 import threeDotsIcon from "@assets/去背物件/02-三點.webp";
-import hollowHexagonIcon from "@assets/去背物件/03-空心六角.webp";
+import hollowCircleIcon from "@assets/去背物件/03-空心圓.webp";
 import hollowWaterDropIcon from "@assets/去背物件/04-空心水.webp";
-import hollowFlowerIcon from "@assets/去背物件/05-空心花.webp";
-import filledHexagonIcon from "@assets/去背物件/06-實心六角.webp";
+import hollowHexagonIcon from "@assets/去背物件/05-空心六角.webp";
+import filledCircleIcon from "@assets/去背物件/06-實心圓.webp";
 import filledWaterDropIcon from "@assets/去背物件/07-實心水.webp";
-import filledFlowerIcon from "@assets/去背物件/08-實心花.webp";
+import filledHexagonIcon from "@assets/去背物件/08-實心六角.webp";
 import doubleLogo from "@assets/去背物件/09-雙logo.webp";
 import background1 from "@assets/去背物件/10-背景1.webp";
 import background2 from "@assets/去背物件/11-背景2.webp";
@@ -133,8 +133,8 @@ const Home: NextPage = () => {
                 "我們相信，只有來自大自然的純淨力量，才能真正滋養肌膚，讓你重拾自信光芒。"
               }
               imageData={naturalImage}
-              hollowIcon={hollowHexagonIcon}
-              filedIcon={filledHexagonIcon}
+              hollowIcon={hollowCircleIcon}
+              filedIcon={filledCircleIcon}
             />
           </Appear>
           <Appear>
@@ -146,8 +146,8 @@ const Home: NextPage = () => {
                 "無論是在忙碌的日常生活中，還是在壓力下需要紓解時，木直系將伴隨著你，帶來身心靈的放鬆。"
               }
               imageData={mildImage}
-              hollowIcon={hollowWaterDropIcon}
-              filedIcon={filledWaterDropIcon}
+              hollowIcon={hollowHexagonIcon}
+              filedIcon={filledHexagonIcon}
             />
           </Appear>
           <Appear>
@@ -159,8 +159,8 @@ const Home: NextPage = () => {
                 "木直系將陪伴著你，為你提供最溫和有效的調理，讓你成長綻放。"
               }
               imageData={relaxImage}
-              hollowIcon={hollowFlowerIcon}
-              filedIcon={filledFlowerIcon}
+              hollowIcon={hollowWaterDropIcon}
+              filedIcon={filledWaterDropIcon}
             />
           </Appear>
         </section>
